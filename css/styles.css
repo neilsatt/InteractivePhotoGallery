@@ -1,0 +1,47 @@
+
+body {
+    background-color: cadetblue;
+}
+
+a { 
+    text-decoration: none;
+    outline: none;
+}
+
+#searchbox  {
+      margin: 0 auto;
+    width: 200px;
+
+}
+img {
+    margin-right: 25px;
+    border: 1px solid aliceblue;
+}
+#row1 {
+    position:relative;
+   display: inline-block;
+    padding-bottom: 50px;
+    width: 100%;
+
+}
+
+#row2 {
+   position:relative;
+   display: inline-block;
+    padding-bottom: 50px;
+    width: 100%;
+  
+}
+
+#row3 {
+   position:relative;
+   display: inline-block;
+   width: 100%;
+}
+
+#pic-container {
+    width: 1000px;
+     display: block;
+     margin: auto;  
+}
+
