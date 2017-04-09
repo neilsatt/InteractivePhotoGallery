@@ -3,45 +3,27 @@ body {
     background-color: cadetblue;
 }
 
-a { 
-    text-decoration: none;
-    outline: none;
-}
 
 #searchbox  {
       margin: 0 auto;
-    width: 200px;
+      width: 200px;
+}
+
+
+.pic-container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: auto;
 
 }
+
+.pic-container .item{
+    margin: 1.2em;
+}
+
 img {
-    margin-right: 25px;
-    border: 1px solid aliceblue;
-}
-#row1 {
-    position:relative;
-   display: inline-block;
-    padding-bottom: 50px;
-    width: 100%;
-
+  border: 1px solid aliceblue;
 }
 
-#row2 {
-   position:relative;
-   display: inline-block;
-    padding-bottom: 50px;
-    width: 100%;
-  
-}
-
-#row3 {
-   position:relative;
-   display: inline-block;
-   width: 100%;
-}
-
-#pic-container {
-    width: 1000px;
-     display: block;
-     margin: auto;  
-}
 
