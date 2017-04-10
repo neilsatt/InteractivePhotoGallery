@@ -3,3 +3,12 @@ http://lokeshdhakar.com/projects/lightbox2/
 https://colorlib.com/wp/free-css3-html5-search-form-examples/
 
 http://xdesigns.net/2013/07/jquery-search-box/
+
+
+      var resetBtn = document.querySelector("#resetBtn");
+          resetBtn.onclick = function() {
+             console.log('btn');
+             location.reload();
+          }; 
+     
+       <button id="resetBtn">Reset Input</button>

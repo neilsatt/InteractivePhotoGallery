@@ -6,7 +6,9 @@ body {
 
 #searchbox  {
       margin: 0 auto;
-      width: 200px;
+      width: 290px;
+    margin-top: 20px;
+    font-size: 16pt;
 }
 
 
@@ -24,6 +26,12 @@ body {
 
 img {
   border: 1px solid aliceblue;
+}
+
+button {
+    font-size: 10px;
+    height: 20px;
+    margin: 0 auto;
 }
 
 

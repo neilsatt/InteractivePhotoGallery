@@ -9,34 +9,64 @@
     <link rel="stylesheet" href="css/styles.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link href="lightbox2-master/src/css/lightbox.css" rel="stylesheet">
+    <script>
+        // jquery solution 
+        $(document).ready(function() {
+            console.log( "ready!" );
+
+            var searchBox = document.querySelector("#search");
+            // console.log(searchBox);
+            searchBox.addEventListener('keypress', checkCaptionTitle); // listen once a change happens in the input box
+            
+            function checkCaptionTitle() {
+                // loop through all of the pictures and their captions
+                console.log(searchBox.value);
+                $('.pic-container a').each(function() { 
+                    console.log($(this).attr('data-title')); // caption
+                if ($(this).attr('data-title').toLowerCase().indexOf(searchBox.value.toLowerCase()) == -1) {
+                    $(this).css("display", "none");
+                } else {
+                    $(this).show(); 
+                }      
+            });
+          }; // end of function
+            
+          var resetBtn = document.querySelector("#resetBtn");
+          resetBtn.onclick = function() {
+             console.log('btn');
+             location.reload();
+          };  
+            
+            
+        }); // end of document ready 
+
+            
+    </script>
 </head>
 
 <body>
- 
+
         <div id="searchbox">
-            <h1>Searchbox</h1>
+            <input id="search" name="search" placeholder="Search by image caption" type="text" data-list=".default_list">
+            <button id="resetBtn">Reset Search Input</button>
         </div>
 
         <div class="pic-container">
-       
-           
-                  
-                        <a href="photos/01.jpg"  class="item" alt="farmland picture" data-lightbox="image-1" data-title="Farmland in the Midwest" class="item">
-                             <img src="photos/thumbnails/01.jpg" alt="farmland picture">
-                        </a>
-                        <a href="photos/02.jpg" alt="lake picture" data-lightbox="image-2" data-title="Moutain Lake in the Rockies" class="item">
-                            <img src="photos/thumbnails/02.jpg" alt="lake picture">
-                        </a>
-                        <a href="photos/03.jpg" alt="meadow picture" data-lightbox="image-3" data-title="Lush Field of Green in Europe"  class="item">
-                            <img src="photos/thumbnails/03.jpg" alt="meadow picture">
-                        </a>
-                        <a href="photos/04.jpg" alt="moutain glacier picture" data-lightbox="image-4" data-title="Mountain glacier in the Arctic"  class="item">
-                            <img src="photos/thumbnails/04.jpg" alt="moutain glacier picture">
-                        </a>
+              
+                    <a href="photos/01.jpg"  class="item" alt="farmland picture" data-lightbox="image-1" data-title="Farmland in the Midwest" class="item">
+                        <img src="photos/thumbnails/01.jpg" alt="farmland picture">
+                    </a>
+                    <a href="photos/02.jpg" alt="lake picture" data-lightbox="image-2" data-title="Mountain Lake in the Rockies" class="item">
+                        <img src="photos/thumbnails/02.jpg" alt="lake picture">
+                    </a>
+                    <a href="photos/03.jpg" alt="meadow picture" data-lightbox="image-3" data-title="Lush Field of Green in Europe"  class="item">
+                        <img src="photos/thumbnails/03.jpg" alt="meadow picture">
+                    </a>
+                    <a href="photos/04.jpg" alt="moutain glacier picture" data-lightbox="image-4" data-title="Mountain glacier in the Arctic"  class="item">
+                        <img src="photos/thumbnails/04.jpg" alt="moutain glacier picture">
+                    </a>
                        
-       
-     
-               
+      
                     <a href="photos/05.jpg" alt="rock formation picture" data-lightbox="image-5" data-title="Rock Formations in Utah"  class="item">
                         <img src="photos/thumbnails/05.jpg" alt="rock formation picture">
                     </a>
@@ -51,8 +81,6 @@
                     </a>
                
       
-                    
-                
                     <a href="photos/09.jpg" alt="coutry road picture" data-lightbox="image-9" data-title="Country Road surrounded by trees"  class="item">
                         <img src="photos/thumbnails/09.jpg" alt="coutry road picture">
                     </a>
@@ -65,9 +93,8 @@
                     <a href="photos/12.jpg" alt="moutain field picture" data-lightbox="image-12" data-title="Mountain Field in the fall"  class="item">
                         <img src="photos/thumbnails/12.jpg" alt="moutain field picture">
                     </a>
-               
-        
-    </div>
+                
+     </div>
    
   <script src="lightbox2-master/src/js/lightbox.js"></script>
 </body>
