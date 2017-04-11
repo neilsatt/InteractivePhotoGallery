@@ -3,14 +3,23 @@ body {
     background-color: cadetblue;
 }
 
-
 #searchbox  {
-      margin: 0 auto;
-      width: 290px;
     margin-top: 20px;
-    font-size: 16pt;
+    font-size: 14pt;   
 }
 
+#searchbox input{   
+    margin: 0 auto ;
+    display:block; 
+    margin-bottom: 10px;
+}
+
+#searchbox button {
+    margin: 0 auto ;
+    display:block; 
+    margin-bottom: 10px;
+  
+}
 
 .pic-container {
     display: flex;
@@ -21,17 +30,41 @@ body {
 }
 
 .pic-container .item{
-    margin: 1.2em;
+    margin: auto;
+    margin-bottom: 10px;
 }
+
 
 img {
   border: 1px solid aliceblue;
 }
 
 button {
-    font-size: 10px;
+    font-size: 12px;
     height: 20px;
-    margin: 0 auto;
+    margin-left: 65px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: darkturquoise; 
+    border: 1px solid black;
 }
+
+/* Media Query */
+
+@media screen and (min-width: 768px) {
+
+    .pic-container .item{
+        margin: 1.2em;
+    }
+    
+    #searchbox  {
+      font-size: 12pt;   
+    }
+    
+}
+
+
+
+
 
 
