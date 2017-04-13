@@ -166,19 +166,16 @@ body.lb-disable-scrolling {
 }
 
 .lb-data .lb-details {
-  width: 96%;
+  width: 85%;
   float: left;
-  text-align: center;
+  text-align: left;
   line-height: 1.1em;
-    background-color: cadetblue;
-    border: 1px solid white;
 }
 
 .lb-data .lb-caption {
   font-size: 13px;
   font-weight: bold;
   line-height: 1em;
-    color: white;
 }
 
 .lb-data .lb-caption a {
@@ -190,7 +187,7 @@ body.lb-disable-scrolling {
   clear: left;
   padding-bottom: 1em;
   font-size: 12px;
-  color: #FFFFFF;
+  color: #999999;
 }
 
 .lb-data .lb-close {
