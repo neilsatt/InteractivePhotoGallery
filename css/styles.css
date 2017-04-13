@@ -12,6 +12,7 @@ body {
     margin: 0 auto ;
     display:block; 
     margin-bottom: 10px;
+    width: 225px;
 }
 
 #searchbox button {
